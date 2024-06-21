@@ -1,0 +1,100 @@
+        <!-- Contacto -->
+        <section class="contacto" id="contacto">
+          <h1 data-section="contacto" data-value="title" data-aos="fade-up">Contacto</h1>
+
+          <div class="container_box--contacto" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+  
+              <div class="container--contacto">
+                  <div class="container_text--contacto">
+                      <p data-section="contacto" data-value="text">Completa el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
+                  </div>
+
+                  <form id="formulario" class="formulario-contacto" name="contacto-portafolio" method="POST" data-netlify="true">
+                        
+                    <input id="email"  type="email" name="email" id="email" placeholder="email" />
+                    
+                    <input id="nombre" type="text" name="name" id="name" placeholder="nombre" required />
+                    <textarea id="mensaje"
+                      required
+                      name="mensaje"
+                      id="mensaje"
+                      cols="30"
+                      rows="10"
+                      placeholder="comentario"
+                    ></textarea>
+                    <div class="divInput">
+               <div class="g-recaptcha" data-sitekey="6LeANO0pAAAAAJUUzZrlyIzoEFZGdhSUFve7hdG-"></div>  
+            </div>
+                    <input id="button" type="submit" value="enviar" />
+                    <div class="divButton">
+                  <a title="Inicia sesion con Google" href='/auth/google'><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png" width="150"></a> 
+             </div>
+                   <!-- <input  type="submit" value="enviar" /> -->
+                  </form>
+                  <p id="mensaje-confirmacion" style="display: none; color: white; font-size: 20px;">¡Formulario enviado con éxito!</p>
+                </div>
+          </div>
+      </section>
+  </main>
+
+  <footer>
+      <div class="contianer--footer">
+          <div class="container_redes-footer">
+              </a>
+              <a href="https://github.com/KeyberIT" target="_blank">
+                  <img src="./images/icon-github.png" alt="GitHub">
+              </a>
+              <a href="https://www.instagram.com/keyber62/" target="_blank">
+                  <img src="./images/icon-instagram.png" alt="Instagram"">
+              </a>
+          </div>
+
+          <div class="container_text--footer">
+              <span>Copyright © | Coded with</span>
+              <img src="../images/icon-corazon.png" alt="Corazón">
+              <span>by</span>
+              <span><%=name%></span>
+          </div>
+      </div>
+  </footer>
+  
+
+  <div class="go-top-container">
+      <div class="go-top-button">
+          <i class="fas fa-chevron-up"></i>
+      </div>
+  </div>
+
+ <script>document.addEventListener("DOMContentLoaded", function() {
+    const formulario = document.querySelector('#formulario');
+    const mensajeConfirmacion = document.getElementById("mensaje-confirmacion");
+
+    formulario.addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+        // Aquí puedes agregar cualquier lógica adicional antes de mostrar el mensaje
+        // Por ejemplo, enviar los datos del formulario a un servidor
+
+        // Muestra el mensaje de confirmación
+        mensajeConfirmacion.style.display = "block";
+        mensajeConfirmacion.textContent = "¡Formulario enviado con éxito!";
+
+        // Muestra una alerta emergente
+        alert("¡Formulario enviado con éxito!");
+
+        // Envía el formulario manualmente utilizando AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/form-contacto", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                console.log("Formulario enviado");
+            }
+        }
+        xhr.send(new URLSearchParams(new FormData(formulario)).toString());
+
+        formulario.reset();
+    });
+});
+
+</script>
