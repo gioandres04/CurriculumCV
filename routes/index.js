@@ -20,7 +20,7 @@ passport.use(new GoogleStrategy({
     clientSecret:GOOGLE_CLIENT_SECRET,
     callbackURL:"https://gio-oauth.onrender.com/google/callback",
     passReqToCallback:true
-    //Randy Graterol 
+    
   },
   function(request, accessToken, refreshToken, profile, done) {
       return done(null,profile); 
