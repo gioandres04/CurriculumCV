@@ -5,7 +5,7 @@
   body {
     padding: 2% 20vw;
     background-color: #BABF93;
-    font-family: Arial, sans-serif; /* Agregué una familia de fuentes para que se vea mejor */
+    font-family: Arial, sans-serif; 
   }
   
   .grid-layout {
@@ -16,8 +16,8 @@
                          "contact   inf"
                          "smedia    inf"
                          "form      form";
-    grid-template-columns: 1fr 1fr; /* Cambié a fr units para que se adapten al ancho */
-    gap: 10px; /* Agregué un gap para separar los elementos */
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
     background-color: #6F7356;
   }
   
@@ -44,11 +44,11 @@
       padding: 0;
     }
     .grid-layout {
-      padding: 10px; /* Ajusté el padding para que se vea mejor en pantallas pequeñas */
+      padding: 10px;
     }
   }
   
-  /* Estilos para los elementos */
+  
   header {
     padding: 3% 0%;
     background-color: #F2E5BD;
