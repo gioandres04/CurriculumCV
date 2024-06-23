@@ -86,21 +86,21 @@ nav h1 {
   nav button {
     width: 20%;
   }
- .registro {
+.registro {
     flex-direction: column;
     align-items: center;
   }
- .registro ul {
+.registro ul {
     width: 60%;
     height: 40vh;
   }
- .registro ul div {
+.registro ul div {
     flex-direction: column;
   }
- .registro ul div span {
+.registro ul div span {
     width: 50%;
   }
- .registro ul div li {
+.registro ul div li {
     width: 50%;
   }
 }
@@ -113,24 +113,28 @@ nav h1 {
   nav button {
     width: 30%;
   }
- .registro {
+.registro {
     flex-direction: column;
     align-items: center;
   }
- .registro ul {
+.registro ul {
     width: 80%;
     height: 30vh;
+    overflow-y: auto; /* Add this to prevent text from overflowing */
   }
- .registro ul div {
+.registro ul div {
     flex-direction: column;
   }
- .registro ul div span {
+.registro ul div span {
     width: 70%;
+    word-wrap: break-word; /* Add this to wrap long words */
   }
- .registro ul div li {
+.registro ul div li {
     width: 70%;
+    word-wrap: break-word; /* Add this to wrap long words */
   }
-  .registro ul {
+ .registro ul {
     font-size: 1rem;
+    padding: 1rem; /* Reduce padding to make room for text */
   }
 }
