@@ -104,3 +104,33 @@ nav h1 {
     width: 50%;
   }
 }
+
+/* Media queries for screens smaller than 600px (phone) */
+@media (max-width: 600px) {
+  nav {
+    padding: 0.5rem;
+  }
+  nav button {
+    width: 30%;
+  }
+ .registro {
+    flex-direction: column;
+    align-items: center;
+  }
+ .registro ul {
+    width: 80%;
+    height: 30vh;
+  }
+ .registro ul div {
+    flex-direction: column;
+  }
+ .registro ul div span {
+    width: 70%;
+  }
+ .registro ul div li {
+    width: 70%;
+  }
+  .registro ul {
+    font-size: 1rem;
+  }
+}
